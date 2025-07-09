@@ -78,17 +78,7 @@
 
   imports = [
     ../../modules/user/git.nix
+    ../../kitty.nix
+    ../../modules/user/hyprland.nix
   ];
-
-  programs.kitty.enable = true;
-  wayland.windowManager.hyprland.enable = true;
-
-  wayland.windowManager.hyprland.settings = {
-    "$mod" = "SUPER";
-    bind = [
-      "$mod, RETURN, exec, kitty"
-      "$mod, W, exec, firefox"
-      "$mod, Q, killactive"
-    ];
-  };
 }
