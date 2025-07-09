@@ -77,7 +77,7 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./git.nix
+    ../../modules/user/git.nix
   ];
 
   programs.kitty.enable = true;

@@ -20,14 +20,14 @@
     nixosConfigurations = {
       nixos-thinkpad = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ ./hosts/thinkpad-t480/configuration.nix ];
       };
     };
 
     homeConfigurations = {
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
+        modules = [ ./users/julien/home.nix ];
       };
     };
 
