@@ -78,7 +78,7 @@
 
   imports = [
     ../../modules/user/git.nix
-    ../../kitty.nix
+    ../../modules/user/kitty.nix
     ../../modules/user/hyprland.nix
   ];
 }
