@@ -78,7 +78,8 @@
 
   imports = [
     ../../modules/user/git.nix
-    ../../modules/user/kitty.nix
+    ../../modules/user/terminal/kitty.nix
+    ../../modules/user/terminal/zsh.nix
     ../../modules/user/hyprland.nix
     ../../modules/user/waybar.nix
   ];
