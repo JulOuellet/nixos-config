@@ -74,6 +74,10 @@
     wget
   ];
 
+  fonts.packages = with pkgs; [
+    pkgs.nerd-fonts.hack
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
