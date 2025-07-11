@@ -7,8 +7,18 @@
     settings = [{
       layer = "top";
       position = "top";
-      modules-left = [ "workspaces" "clock" ];
-      modules-right = [ "pulseaudio" ];
+
+      modules-left = [ "hyprland/workspaces" ];
+      modules-center = [ "clock" ];
+      modules-right = [ "battery" ];
+
+      clock = {
+        format = "{:%H:%M:%S}";
+      };
+
+      battery = {
+        format = "{capacity}%";
+      };
     }];
   };
 }
