@@ -80,5 +80,6 @@
     ../../modules/user/git.nix
     ../../modules/user/kitty.nix
     ../../modules/user/hyprland.nix
+    ../../modules/user/waybar.nix
   ];
 }
