@@ -35,8 +35,9 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     
-    firefox
-    brightnessctl
+    firefox		# My browser
+    brightnessctl	# Screen brightness control
+    pamixer		# Volume control
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -83,5 +84,6 @@
     ../../modules/user/terminal/zsh.nix
     ../../modules/user/hyprland.nix
     ../../modules/user/waybar.nix
+    ../../modules/user/fuzzel.nix
   ];
 }
