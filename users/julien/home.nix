@@ -85,5 +85,6 @@
     ../../modules/user/hyprland.nix
     ../../modules/user/waybar.nix
     ../../modules/user/fuzzel.nix
+    ../../modules/user/neovim.nix
   ];
 }
