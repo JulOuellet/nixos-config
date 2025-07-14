@@ -9,16 +9,32 @@
       position = "top";
 
       modules-left = [ "hyprland/workspaces" ];
-      modules-center = [ "clock" ];
-      modules-right = [ "battery" ];
+      modules-center = [];
+      modules-right = [ "memory" "cpu" "temperature" "battery" "clock" ];
+
+      memory = {
+        format = "RAM: {percentage}%";
+      };
+
+      cpu = {
+        format = "CPU: {usage}%";
+      };
+
+      temperature = {
+        hwmon-path = "/sys/class/thermal/thermal_zone0/temp";
+        critical-threshold = 80;
+        format = "Temp: {temperatureC}°C";
+      };
+
+      battery = {
+        format = "Battery: {capacity}%";
+        format-charging = "Battery: {capacity}% (charging)";
+      };
 
       clock = {
         format = "{:%H:%M:%S}";
       };
 
-      battery = {
-        format = "{capacity}%";
-      };
     }];
   };
 }
