@@ -4,6 +4,11 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+
+    extraPackages = with pkgs; [
+      ripgrep
+      gcc
+    ];
   };
 
   # For faster development of nvim config, ~/.config/nvim is a symlink to ~/.nvim/nvim-config
