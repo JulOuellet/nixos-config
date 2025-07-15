@@ -38,6 +38,7 @@
     firefox		# My browser
     brightnessctl	# Screen brightness control
     pamixer		# Volume control
+    tree		# Cool to print project structures
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
