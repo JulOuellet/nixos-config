@@ -5,8 +5,7 @@
     enable = true;
 
     settings = {
-      font_family = "Hack Nerd Font";
-      font_size = "12.0";
+      window_padding_width = 5;
     };
   };
 }
