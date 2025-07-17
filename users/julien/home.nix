@@ -80,6 +80,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ../../modules/user/stylix.nix
     ../../modules/user/git.nix
     ../../modules/user/terminal/kitty.nix
     ../../modules/user/terminal/zsh.nix
