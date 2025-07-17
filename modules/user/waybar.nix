@@ -13,26 +13,26 @@
       modules-right = [ "memory" "cpu" "temperature" "battery" "clock" ];
 
       memory = {
-        format = "RAM: {percentage}%";
+	format = "RAM: {percentage}%";
       };
 
       cpu = {
-        format = "CPU: {usage}%";
+	format = "CPU: {usage}%";
       };
 
       temperature = {
-        hwmon-path = "/sys/class/thermal/thermal_zone0/temp";
-        critical-threshold = 80;
-        format = "Temp: {temperatureC}°C";
+	hwmon-path = "/sys/class/thermal/thermal_zone0/temp";
+	critical-threshold = 80;
+	format = "Temp: {temperatureC}°C";
       };
 
       battery = {
-        format = "Battery: {capacity}%";
-        format-charging = "Battery: {capacity}% (charging)";
+	format = "Battery: {capacity}%";
+	format-charging = "Battery: {capacity}% (charging)";
       };
 
       clock = {
-        format = "{:%H:%M:%S}";
+	format = "{:%H:%M:%S}";
       };
 
     }];

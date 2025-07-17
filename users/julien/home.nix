@@ -34,7 +34,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    
+
     firefox		# My browser
     brightnessctl	# Screen brightness control
     pamixer		# Volume control
