@@ -12,7 +12,7 @@
     waybar.enable = true;
     hyprland.enable = true;
     firefox.enable = true;
-    neovim.enable = false;
+    neovim.enable = false;  # let neovim configure its own theme
     fuzzel.enable = true;
     gtk.enable = true;
   };
