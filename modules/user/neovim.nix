@@ -6,8 +6,13 @@
     defaultEditor = true;
 
     extraPackages = with pkgs; [
+      # neovim package dependancies
       ripgrep
       gcc
+
+      # lsp packages
+      lua-language-server
+      nixd
     ];
   };
 
