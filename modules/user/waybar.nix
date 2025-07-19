@@ -7,28 +7,16 @@
     settings = [{
       layer = "top";
       position = "top";
+      margin = "10 10 0 10";
 
       modules-left = [ "hyprland/workspaces" ];
-      modules-center = [];
-      modules-right = [ "memory" "cpu" "temperature" "battery" "clock" ];
-
-      memory = {
-	format = "RAM: {percentage}%";
-      };
-
-      cpu = {
-	format = "CPU: {usage}%";
-      };
-
-      temperature = {
-	hwmon-path = "/sys/class/thermal/thermal_zone0/temp";
-	critical-threshold = 80;
-	format = "Temp: {temperatureC}°C";
-      };
+      modules-center = [ "clock" ];
+      modules-right = [ "battery" ];
 
       battery = {
-	format = "Battery: {capacity}%";
-	format-charging = "Battery: {capacity}% (charging)";
+	format = "{capacity}% {icon}";
+	format-charging = "{capacity}% ";
+	format-icons = [ "" "" "" "" "" ];
       };
 
       clock = {
@@ -36,5 +24,7 @@
       };
 
     }];
+
+    style = builtins.readFile ./assets/style.css;
   };
 }

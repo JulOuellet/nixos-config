@@ -1,0 +1,25 @@
+* {
+  border: none;
+  font-family: Hack Nerd Font, sans-serif;
+  font-size: 15px;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.modules-right {
+  background: #343F44;
+}
+
+.modules-center {
+  background: #343F44;
+}
+
+.modules-left {
+  background: #343F44;
+}
+
+window#waybar {
+  background: transparent;
+}
+

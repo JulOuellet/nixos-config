@@ -12,7 +12,7 @@
 
     targets = {
       kitty.enable = true;
-      waybar.enable = true;
+      waybar.enable = false;  # Waybar is customized from its style.css file
       hyprland.enable = true;
       firefox.enable = true;
       neovim.enable = false;  # let neovim configure its own theme
@@ -21,10 +21,10 @@
     };
 
     fonts.sizes = {
-      applications = 10;
-      terminal = 10;
-      desktop = 10;
-      popups = 10;
+      applications = 12;
+      terminal = 12;
+      desktop = 12;
+      popups = 12;
     };
 
     opacity = {
