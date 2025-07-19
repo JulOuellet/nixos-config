@@ -13,6 +13,7 @@
       # lsp packages
       lua-language-server
       nixd
+      vscode-langservers-extracted
     ];
   };
 
