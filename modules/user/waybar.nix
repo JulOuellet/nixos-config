@@ -14,9 +14,16 @@
       modules-right = [ "battery" ];
 
       battery = {
+	interval = 10; # Battery state polling period (seconds)
+
 	format = "{capacity}% {icon}";
-	format-charging = "{capacity}% ";
+	format-charging = "{capacity}%  {time}";
 	format-icons = [ "" "" "" "" "" ];
+
+	states = {
+	  warning = 20;
+	  critical = 10;
+	};
       };
 
       clock = {

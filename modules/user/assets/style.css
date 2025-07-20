@@ -23,3 +23,15 @@ window#waybar {
   background: transparent;
 }
 
+#battery.charging {
+  color: #7FBBB3;
+}
+
+#battery.warning {
+  color: #DBBC7F;
+}
+
+#battery.critical {
+  color: #E67E80;
+}
+
