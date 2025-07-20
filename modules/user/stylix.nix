@@ -8,7 +8,7 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
     polarity = "dark";
 
-    image = ../../assets/wallpaper.png;
+    image = ./assets/wallpaper.png;
 
     targets = {
       kitty.enable = true;
