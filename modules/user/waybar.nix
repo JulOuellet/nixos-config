@@ -11,7 +11,7 @@
 
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "battery" ];
+      modules-right = [ "pulseaudio" "pulseaudio/slider" "battery" ];
 
       battery = {
 	interval = 10; # Battery state polling period (seconds)
@@ -24,6 +24,23 @@
 	  warning = 20;
 	  critical = 10;
 	};
+      };
+
+      pulseaudio = {
+	format = "{icon}";
+	format-muted = "";
+	format-icons = {
+	  default = [ "" "" "" ];
+	};
+
+	tooltip = true;
+	tooltip-format = "Volume: {volume}%";
+      };
+
+      pulseaudio-slider = {
+	max = 0;
+	min = 100;
+	orientation = "orizontal";
       };
 
       clock = {
