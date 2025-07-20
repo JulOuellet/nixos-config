@@ -14,7 +14,7 @@
       modules-right = [ "pulseaudio" "pulseaudio/slider" "battery" ];
 
       battery = {
-	interval = 10; # Battery state polling period (seconds)
+	interval = 10;
 
 	format = "{capacity}% {icon}";
 	format-charging = "{capacity}%  {time}";
@@ -44,7 +44,8 @@
       };
 
       clock = {
-	format = "{:%H:%M:%S}";
+	interval = 1;
+	format = "{:%a %d %b %Y | %H:%M:%S}";
       };
 
     }];

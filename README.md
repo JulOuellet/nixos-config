@@ -21,12 +21,13 @@ TODO
 │   ├── system/                         # System-level modules
 │   │   └── ...
 │   └── user/                           # User-level modules
+│       ├── assets/                     # User visual assets (css, wallpapers, etc.)
+│       │   └── ...
 │       └── ...
 │       
 └── users/                              # User-specific configurations
     └── julien/
-        ├── home.nix                    # Home Manager configuration for user 'julien'
-        └── ...
+        └── home.nix                    # Home Manager configuration for user 'julien'
 ```
 
 ## Installation
