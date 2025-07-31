@@ -9,6 +9,7 @@
       # neovim package dependancies
       ripgrep
       gcc
+      nodejs
 
       # lsp packages
       lua-language-server
