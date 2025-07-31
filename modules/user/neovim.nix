@@ -6,7 +6,7 @@
     defaultEditor = true;
 
     extraPackages = with pkgs; [
-      # neovim package dependancies
+      # neovim package dependencies
       ripgrep
       gcc
       nodejs
