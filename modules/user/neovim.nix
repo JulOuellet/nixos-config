@@ -6,7 +6,7 @@
     defaultEditor = true;
 
     extraPackages = with pkgs; [
-      # neovim package dependencies
+      # neovim plugins dependencies
       ripgrep
       gcc
       nodejs
@@ -14,7 +14,10 @@
       # lsp packages
       lua-language-server
       nixd
-      vscode-langservers-extracted
+      vscode-langservers-extracted # json, css, html
+      bash-language-server
+      gopls
+      sqls
     ];
   };
 
