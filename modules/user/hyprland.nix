@@ -56,6 +56,13 @@
       general = {
 	gaps_in = 5;
 	gaps_out = 10;
+	border_size = 0;
+      };
+
+      decoration = {
+	active_opacity = 1.0;
+	inactive_opacity = 0.7;
+	rounding = 8;
       };
 
       exec-once = "waybar";
