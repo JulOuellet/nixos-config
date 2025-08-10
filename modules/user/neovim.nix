@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -18,6 +20,15 @@
       bash-language-server
       gopls
       sqls
+
+      # formatter packages
+      gofumpt
+      gotools
+      alejandra
+      stylua
+      nodePackages.prettier
+      nodePackages.sql-formatter
+      jq
     ];
   };
 
