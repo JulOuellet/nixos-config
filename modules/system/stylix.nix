@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   stylix = {
     enable = true;
 
@@ -10,16 +12,16 @@
 
     fonts = {
       monospace = {
-	package = pkgs.nerd-fonts.hack;
-	name = "Hack Nerd Font Mono";
+        package = pkgs.nerd-fonts.hack;
+        name = "Hack Nerd Font Mono";
       };
       sansSerif = {
-	package = pkgs.inter;
-	name = "Inter";
+        package = pkgs.inter;
+        name = "Inter";
       };
       serif = {
-	package = pkgs.dejavu_fonts;
-	name = "DejaVu Serif";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
       };
     };
 

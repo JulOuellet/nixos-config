@@ -29,6 +29,7 @@
       nodePackages.prettier
       nodePackages.sql-formatter
       jq
+      shfmt
     ];
   };
 

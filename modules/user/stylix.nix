@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   stylix = {
     enable = true;
 
@@ -12,10 +14,10 @@
 
     targets = {
       kitty.enable = true;
-      waybar.enable = false;  # Waybar is customized from its style.css file
+      waybar.enable = false; # Waybar is customized from its style.css file
       hyprland.enable = true;
       firefox.enable = true;
-      neovim.enable = false;  # let neovim configure its own theme
+      neovim.enable = false; # let neovim configure its own theme
       fuzzel.enable = true;
       gtk.enable = true;
     };
@@ -33,6 +35,5 @@
       desktop = 1.0;
       popups = 1.0;
     };
-
   };
 }

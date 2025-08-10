@@ -1,6 +1,8 @@
 * {
   border: none;
-  font-family: Hack Nerd Font, sans-serif;
+  font-family:
+    Hack Nerd Font,
+    sans-serif;
   font-size: 15px;
   border-radius: 20px;
   padding-left: 10px;
@@ -8,15 +10,15 @@
 }
 
 .modules-right {
-  background: #343F44;
+  background: #343f44;
 }
 
 .modules-center {
-  background: #343F44;
+  background: #343f44;
 }
 
 .modules-left {
-  background: #343F44;
+  background: #343f44;
 }
 
 window#waybar {
@@ -24,34 +26,34 @@ window#waybar {
 }
 
 #battery.charging {
-  color: #7FBBB3;
+  color: #7fbbb3;
 }
 #battery.warning {
-  color: #DBBC7F;
+  color: #dbbc7f;
 }
 #battery.critical {
-  color: #E67E80;
+  color: #e67e80;
 }
 
 #pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
 }
 #pulseaudio-slider trough {
-    min-height: 10px;
-    min-width: 80px;
-    padding: 0px;
-    border-radius: 5px;
-    background-color: #232A2E;
+  min-height: 10px;
+  min-width: 80px;
+  padding: 0px;
+  border-radius: 5px;
+  background-color: #232a2e;
 }
 #pulseaudio-slider highlight {
-    min-height: 0px;
-    min-width: 0px;
-    padding: 0px;
-    border-radius: 5px;
-    background-color: #A7C080;
+  min-height: 0px;
+  min-width: 0px;
+  padding: 0px;
+  border-radius: 5px;
+  background-color: #a7c080;
 }

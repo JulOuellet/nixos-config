@@ -13,21 +13,24 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }:
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in 
-    {
-
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    stylix,
+    ...
+  }: let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
     nixosConfigurations = {
       nixos-thinkpad = lib.nixosSystem {
         inherit system;
         modules = [
-	  ./hosts/thinkpad-t480/configuration.nix
-	  stylix.nixosModules.stylix
-	];
+          ./hosts/thinkpad-t480/configuration.nix
+          stylix.nixosModules.stylix
+        ];
       };
     };
 
@@ -35,11 +38,10 @@
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-	  ./users/julien/home.nix
-	  stylix.homeModules.stylix
-	];
+          ./users/julien/home.nix
+          stylix.homeModules.stylix
+        ];
       };
     };
-
   };
 }

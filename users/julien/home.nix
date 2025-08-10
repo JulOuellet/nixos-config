@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "julien";
@@ -35,10 +37,10 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
-    firefox		# My browser
-    brightnessctl	# Screen brightness control
-    pamixer		# Volume control
-    tree		# Cool to print project structures
+    firefox # My browser
+    brightnessctl # Screen brightness control
+    pamixer # Volume control
+    tree # Cool to print project structures
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
