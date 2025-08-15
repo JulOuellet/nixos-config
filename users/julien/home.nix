@@ -90,5 +90,6 @@
     ../../modules/user/waybar.nix
     ../../modules/user/fuzzel.nix
     ../../modules/user/neovim.nix
+    ../../modules/user/direnv.nix
   ];
 }
