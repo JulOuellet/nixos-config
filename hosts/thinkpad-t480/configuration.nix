@@ -24,6 +24,8 @@
   # Needed this line, otherwise hyprland crashed when trying to launch
   hardware.opengl.enable = true;
 
+  virtualisation.docker.enable = true;
+
   networking.hostName = "nixos-thinkpad"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -70,7 +72,7 @@
   users.users.julien = {
     isNormalUser = true;
     description = "Julien Ouellet";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     packages = with pkgs; [];
   };
 

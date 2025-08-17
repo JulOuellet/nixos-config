@@ -27,7 +27,7 @@
       alejandra
       stylua
       nodePackages.prettier
-      nodePackages.sql-formatter
+      pgformatter
       jq
       shfmt
     ];
