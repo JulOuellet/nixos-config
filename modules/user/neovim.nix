@@ -12,6 +12,7 @@
       ripgrep
       gcc
       nodejs
+      go
 
       # lsp packages
       lua-language-server

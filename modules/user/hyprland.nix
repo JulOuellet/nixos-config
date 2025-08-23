@@ -70,6 +70,18 @@
         rounding = 8;
       };
 
+      monitor = [
+        # Default laptop setup
+        "eDP-1,1920x1080@60,0x0,1.5"
+        "DP-1,disable"
+        "HDMI-A-2,disable"
+
+        # Dual monitor setup
+        "DP-1,2560x1440@60,1920x0,1"
+        "HDMI-A-2,1920x1080@60,0x0,1"
+        "eDP-1,disable"
+      ];
+
       exec-once = "waybar";
     };
   };
