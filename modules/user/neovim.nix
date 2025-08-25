@@ -21,6 +21,7 @@
       bash-language-server
       gopls
       sqls
+      templ
 
       # formatter packages
       gofumpt
