@@ -9,6 +9,11 @@
     settings = {
       "$mod" = "SUPER";
 
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
+      ];
+
       bind =
         [
           # Open and close programs
@@ -36,6 +41,9 @@
           "$mod SHIFT, RIGHT, swapwindow, r"
           "$mod SHIFT, UP, swapwindow, u"
           "$mod SHIFT, DOWN, swapwindow, d"
+
+          # Toggle floating windows
+          "$mod, F, togglefloating"
 
           # Brightness
           ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
