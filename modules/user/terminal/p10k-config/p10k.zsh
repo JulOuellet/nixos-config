@@ -513,72 +513,12 @@
   typeset -g POWERLEVEL9K_XPLR_FOREGROUND=0
   typeset -g POWERLEVEL9K_XPLR_BACKGROUND=6
 
-  ###########################[ vim_shell: vim shell indicator (:sh) ]###########################
-  typeset -g POWERLEVEL9K_VIM_SHELL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_VIM_SHELL_BACKGROUND=2
-
-  ######[ midnight_commander: midnight commander shell (https://midnight-commander.org/) ]######
-  typeset -g POWERLEVEL9K_MIDNIGHT_COMMANDER_FOREGROUND=3
-  typeset -g POWERLEVEL9K_MIDNIGHT_COMMANDER_BACKGROUND=0
-
   #[ nix_shell: nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html) ]##
   typeset -g POWERLEVEL9K_NIX_SHELL_FOREGROUND=0
   typeset -g POWERLEVEL9K_NIX_SHELL_BACKGROUND=4
 
   # Display the icon of nix_shell if PATH contains a subdirectory of /nix/store.
   # typeset -g POWERLEVEL9K_NIX_SHELL_INFER_FROM_PATH=false
-
-  # Tip: If you want to see just the icon without "pure" and "impure", uncomment the next line.
-  # typeset -g POWERLEVEL9K_NIX_SHELL_CONTENT_EXPANSION=
-
-  ##################[ chezmoi_shell: chezmoi shell (https://www.chezmoi.io/) ]##################
-  typeset -g POWERLEVEL9K_CHEZMOI_SHELL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_CHEZMOI_SHELL_BACKGROUND=4
-
-  ##################################[ disk_usage: disk usage ]##################################
-  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_FOREGROUND=3
-  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_BACKGROUND=0
-  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_FOREGROUND=0
-  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_BACKGROUND=3
-  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_FOREGROUND=7
-  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_BACKGROUND=1
-  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_LEVEL=90
-  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
-  typeset -g POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=false
-
-  ###########[ vi_mode: vi mode (you don't need this if you've enabled prompt_char) ]###########
-  typeset -g POWERLEVEL9K_VI_MODE_FOREGROUND=0
-  typeset -g POWERLEVEL9K_VI_COMMAND_MODE_STRING=NORMAL
-  typeset -g POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND=2
-  typeset -g POWERLEVEL9K_VI_VISUAL_MODE_STRING=VISUAL
-  typeset -g POWERLEVEL9K_VI_MODE_VISUAL_BACKGROUND=4
-  typeset -g POWERLEVEL9K_VI_OVERWRITE_MODE_STRING=OVERTYPE
-  typeset -g POWERLEVEL9K_VI_MODE_OVERWRITE_BACKGROUND=3
-  typeset -g POWERLEVEL9K_VI_INSERT_MODE_STRING=
-  typeset -g POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND=8
-
-  ######################################[ ram: free RAM ]#######################################
-  typeset -g POWERLEVEL9K_RAM_FOREGROUND=0
-  typeset -g POWERLEVEL9K_RAM_BACKGROUND=3
-
-  #####################################[ swap: used swap ]######################################
-  typeset -g POWERLEVEL9K_SWAP_FOREGROUND=0
-  typeset -g POWERLEVEL9K_SWAP_BACKGROUND=3
-
-  ######################################[ load: CPU load ]######################################
-  typeset -g POWERLEVEL9K_LOAD_WHICH=5
-  typeset -g POWERLEVEL9K_LOAD_NORMAL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_LOAD_NORMAL_BACKGROUND=2
-  typeset -g POWERLEVEL9K_LOAD_WARNING_FOREGROUND=0
-  typeset -g POWERLEVEL9K_LOAD_WARNING_BACKGROUND=3
-  typeset -g POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND=0
-  typeset -g POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND=1
-
-  ################[ todo: todo items (https://github.com/todotxt/todo.txt-cli) ]################
-  typeset -g POWERLEVEL9K_TODO_FOREGROUND=0
-  typeset -g POWERLEVEL9K_TODO_BACKGROUND=8
-  typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_TOTAL=true
-  typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_FILTERED=false
 
   # Todo format. The following parameters are available within the expansion.
   #
@@ -592,16 +532,6 @@
   # Here 24 is P9K_TODO_FILTERED_TASK_COUNT and 42 is P9K_TODO_TOTAL_TASK_COUNT.
   #
   # typeset -g POWERLEVEL9K_TODO_CONTENT_EXPANSION='$P9K_TODO_FILTERED_TASK_COUNT'
-
-  ###########[ timewarrior: timewarrior tracking status (https://timewarrior.net/) ]############
-  typeset -g POWERLEVEL9K_TIMEWARRIOR_FOREGROUND=255
-  typeset -g POWERLEVEL9K_TIMEWARRIOR_BACKGROUND=8
-
-  typeset -g POWERLEVEL9K_TIMEWARRIOR_CONTENT_EXPANSION='${P9K_CONTENT:0:24}${${P9K_CONTENT:24}:+…}'
-
-  ##############[ taskwarrior: taskwarrior task count (https://taskwarrior.org/) ]##############
-  typeset -g POWERLEVEL9K_TASKWARRIOR_FOREGROUND=0
-  typeset -g POWERLEVEL9K_TASKWARRIOR_BACKGROUND=6
 
   ######[ per_directory_history: Oh My Zsh per-directory-history local/global indicator ]#######
   typeset -g POWERLEVEL9K_PER_DIRECTORY_HISTORY_LOCAL_FOREGROUND=0
@@ -634,53 +564,12 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_WITH_PYENV=false
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
-  #####################[ anaconda: conda environment (https://conda.io/) ]######################
-  typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND=0
-  typeset -g POWERLEVEL9K_ANACONDA_BACKGROUND=4
-
-  # Anaconda segment format
-  typeset -g POWERLEVEL9K_ANACONDA_CONTENT_EXPANSION='${${${${CONDA_PROMPT_MODIFIER#\(}% }%\)}:-${CONDA_PREFIX:t}}'
-
-  ################[ pyenv: python environment (https://github.com/pyenv/pyenv) ]################
-  typeset -g POWERLEVEL9K_PYENV_FOREGROUND=0
-  typeset -g POWERLEVEL9K_PYENV_BACKGROUND=4
-  typeset -g POWERLEVEL9K_PYENV_SOURCES=(shell local global)
-  typeset -g POWERLEVEL9K_PYENV_PROMPT_ALWAYS_SHOW=false
-  typeset -g POWERLEVEL9K_PYENV_SHOW_SYSTEM=true
-
-  # Pyenv segment format
-  typeset -g POWERLEVEL9K_PYENV_CONTENT_EXPANSION='${P9K_CONTENT}${${P9K_CONTENT:#$P9K_PYENV_PYTHON_VERSION(|/*)}:+ $P9K_PYENV_PYTHON_VERSION}'
-
   ################[ goenv: go environment (https://github.com/syndbg/goenv) ]################
   typeset -g POWERLEVEL9K_GOENV_FOREGROUND=0
   typeset -g POWERLEVEL9K_GOENV_BACKGROUND=4
   typeset -g POWERLEVEL9K_GOENV_SOURCES=(shell local global)
   typeset -g POWERLEVEL9K_GOENV_PROMPT_ALWAYS_SHOW=false
   typeset -g POWERLEVEL9K_GOENV_SHOW_SYSTEM=true
-
-  ##########[ nodenv: node.js version from nodenv (https://github.com/nodenv/nodenv) ]##########
-  typeset -g POWERLEVEL9K_NODENV_FOREGROUND=2
-  typeset -g POWERLEVEL9K_NODENV_BACKGROUND=0
-  typeset -g POWERLEVEL9K_NODENV_SOURCES=(shell local global)
-  typeset -g POWERLEVEL9K_NODENV_PROMPT_ALWAYS_SHOW=false
-  typeset -g POWERLEVEL9K_NODENV_SHOW_SYSTEM=true
-
-  ##############[ nvm: node.js version from nvm (https://github.com/nvm-sh/nvm) ]###############
-  typeset -g POWERLEVEL9K_NVM_FOREGROUND=0
-  typeset -g POWERLEVEL9K_NVM_BACKGROUND=5
-  typeset -g POWERLEVEL9K_NVM_PROMPT_ALWAYS_SHOW=false
-  typeset -g POWERLEVEL9K_NVM_SHOW_SYSTEM=true
-
-  ############[ nodeenv: node.js environment (https://github.com/ekalinin/nodeenv) ]############
-  typeset -g POWERLEVEL9K_NODEENV_FOREGROUND=2
-  typeset -g POWERLEVEL9K_NODEENV_BACKGROUND=0
-  typeset -g POWERLEVEL9K_NODEENV_SHOW_NODE_VERSION=false
-  typeset -g POWERLEVEL9K_NODEENV_{LEFT,RIGHT}_DELIMITER=
-
-  ##############################[ node_version: node.js version ]###############################
-  typeset -g POWERLEVEL9K_NODE_VERSION_FOREGROUND=7
-  typeset -g POWERLEVEL9K_NODE_VERSION_BACKGROUND=2
-  typeset -g POWERLEVEL9K_NODE_VERSION_PROJECT_ONLY=true
 
   #######################[ go_version: go version (https://golang.org) ]########################
   typeset -g POWERLEVEL9K_GO_VERSION_FOREGROUND=255
@@ -691,20 +580,6 @@
   typeset -g POWERLEVEL9K_RUST_VERSION_FOREGROUND=0
   typeset -g POWERLEVEL9K_RUST_VERSION_BACKGROUND=208
   typeset -g POWERLEVEL9K_RUST_VERSION_PROJECT_ONLY=true
-
-  ###############[ dotnet_version: .NET version (https://dotnet.microsoft.com) ]################
-  typeset -g POWERLEVEL9K_DOTNET_VERSION_FOREGROUND=7
-  typeset -g POWERLEVEL9K_DOTNET_VERSION_BACKGROUND=5
-  typeset -g POWERLEVEL9K_DOTNET_VERSION_PROJECT_ONLY=true
-
-  #####################[ php_version: php version (https://www.php.net/) ]######################
-  typeset -g POWERLEVEL9K_PHP_VERSION_FOREGROUND=0
-  typeset -g POWERLEVEL9K_PHP_VERSION_BACKGROUND=5
-  typeset -g POWERLEVEL9K_PHP_VERSION_PROJECT_ONLY=true
-
-  ##########[ laravel_version: laravel php framework version (https://laravel.com/) ]###########
-  typeset -g POWERLEVEL9K_LARAVEL_VERSION_FOREGROUND=1
-  typeset -g POWERLEVEL9K_LARAVEL_VERSION_BACKGROUND=7
 
   #############[ rbenv: ruby version from rbenv (https://github.com/rbenv/rbenv) ]##############
   typeset -g POWERLEVEL9K_RBENV_FOREGROUND=0
@@ -855,71 +730,20 @@
   typeset -g POWERLEVEL9K_GCLOUD_COMPLETE_CONTENT_EXPANSION='${P9K_GCLOUD_PROJECT_NAME//\%/%%}'
   typeset -g POWERLEVEL9K_GCLOUD_REFRESH_PROJECT_NAME_SECONDS=60
 
-  #[ google_app_cred: google application credentials (https://cloud.google.com/docs/authentication/production) ]#
-  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_SHOW_ON_COMMAND='terraform|pulumi|terragrunt'
-
-  # Google application credentials classes for the purpose of using different colors, icons and
-  # expansions with different credentials.
-  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_CLASSES=(
-      # '*:*prod*:*'  PROD    # These values are examples that are unlikely
-      # '*:*test*:*'  TEST    # to match your needs. Customize them as needed.
-      '*'             DEFAULT)
-  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_DEFAULT_FOREGROUND=7
-  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_DEFAULT_BACKGROUND=4
-
-  # Use POWERLEVEL9K_GOOGLE_APP_CRED_CONTENT_EXPANSION to specify the content displayed by
-  # google_app_cred segment. Parameter expansions are very flexible and fast, too. See reference:
-  # http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion.
-  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_DEFAULT_CONTENT_EXPANSION='${P9K_GOOGLE_APP_CRED_PROJECT_ID//\%/%%}'
-
   ##############[ toolbox: toolbox name (https://github.com/containers/toolbox) ]###############
   typeset -g POWERLEVEL9K_TOOLBOX_FOREGROUND=0
   typeset -g POWERLEVEL9K_TOOLBOX_BACKGROUND=3
   typeset -g POWERLEVEL9K_TOOLBOX_CONTENT_EXPANSION='${P9K_TOOLBOX_NAME:#fedora-toolbox-*}'
 
-  ###############################[ public_ip: public IP address ]###############################
-  typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=7
-  typeset -g POWERLEVEL9K_PUBLIC_IP_BACKGROUND=0
-
-  ########################[ vpn_ip: virtual private network indicator ]#########################
-  typeset -g POWERLEVEL9K_VPN_IP_FOREGROUND=0
-  typeset -g POWERLEVEL9K_VPN_IP_BACKGROUND=6
-  typeset -g POWERLEVEL9K_VPN_IP_CONTENT_EXPANSION=
-  typeset -g POWERLEVEL9K_VPN_IP_INTERFACE='(gpd|wg|(.*tun)|tailscale)[0-9]*|(zt.*)'
-  typeset -g POWERLEVEL9K_VPN_IP_SHOW_ALL=false
-
-  ###########[ ip: ip address and bandwidth usage for a specified network interface ]###########
-  typeset -g POWERLEVEL9K_IP_BACKGROUND=4
-  typeset -g POWERLEVEL9K_IP_FOREGROUND=0
-  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_RX_RATE:+⇣$P9K_IP_RX_RATE }${P9K_IP_TX_RATE:+⇡$P9K_IP_TX_RATE }$P9K_IP_IP'
-  typeset -g POWERLEVEL9K_IP_INTERFACE='[ew].*'
-
   #########################[ proxy: system-wide http/https/ftp proxy ]##########################
   typeset -g POWERLEVEL9K_PROXY_FOREGROUND=4
   typeset -g POWERLEVEL9K_PROXY_BACKGROUND=0
-
-  ################################[ battery: internal battery ]#################################
-  typeset -g POWERLEVEL9K_BATTERY_LOW_THRESHOLD=20
-  typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND=1
-  typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND=2
-  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=3
-  typeset -g POWERLEVEL9K_BATTERY_STAGES='\UF008E\UF007A\UF007B\UF007C\UF007D\UF007E\UF007F\UF0080\UF0081\UF0082\UF0079'
-  typeset -g POWERLEVEL9K_BATTERY_VERBOSE=false
-  typeset -g POWERLEVEL9K_BATTERY_BACKGROUND=0
-
-  #####################################[ wifi: wifi speed ]#####################################
-  typeset -g POWERLEVEL9K_WIFI_FOREGROUND=0
-  typeset -g POWERLEVEL9K_WIFI_BACKGROUND=4
 
   ####################################[ time: current time ]####################################
   typeset -g POWERLEVEL9K_TIME_FOREGROUND=0
   typeset -g POWERLEVEL9K_TIME_BACKGROUND=7
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
   typeset -g POWERLEVEL9K_TIME_UPDATE_ON_COMMAND=false
-
-  # User-defined prompt segments can be customized the same way as built-in segments.
-  typeset -g POWERLEVEL9K_EXAMPLE_FOREGROUND=3
-  typeset -g POWERLEVEL9K_EXAMPLE_BACKGROUND=1
 
   # Transient prompt works similarly to the builtin transient_rprompt option. It trims down prompt
   # when accepting a command line. Supported values:
