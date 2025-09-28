@@ -14,7 +14,12 @@
 
         modules-left = ["hyprland/workspaces"];
         modules-center = ["clock"];
-        modules-right = ["pulseaudio" "pulseaudio/slider" "battery"];
+        modules-right = [
+          "hyprland/language"
+          "pulseaudio"
+          "pulseaudio/slider"
+          "battery"
+        ];
 
         battery = {
           interval = 10;
@@ -43,12 +48,19 @@
         pulseaudio-slider = {
           max = 0;
           min = 100;
-          orientation = "orizontal";
+          orientation = "horizontal";
         };
 
         clock = {
           interval = 1;
           format = "{:%a %d %b %Y | %H:%M:%S}";
+        };
+
+        "hyprland/language" = {
+          format = "⌨ {}";
+          format-en = "en";
+          format-fr = "fr";
+          tooltip-format = "Keyboard: {}";
         };
       }
     ];

@@ -9,6 +9,12 @@
     settings = {
       "$mod" = "SUPER";
 
+      input = {
+        kb_layout = "us,ca";
+        kb_variant = ",fr";
+        kb_options = "grp:alt_shift_toggle";
+      };
+
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
@@ -53,6 +59,8 @@
           ", XF86AudioRaiseVolume, exec, pamixer -i 5"
           ", XF86AudioLowerVolume, exec, pamixer -d 5"
           ", XF86AudioMute, exec, pamixer -t"
+
+          "$mod, SPACE, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
         ]
         ++ (
           builtins.concatLists (builtins.genList (
