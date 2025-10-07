@@ -22,6 +22,7 @@
       gopls
       sqls
       templ
+      pyright
 
       # formatter packages
       gofumpt
@@ -32,6 +33,7 @@
       pgformatter
       jq
       shfmt
+      ruff
     ];
   };
 
