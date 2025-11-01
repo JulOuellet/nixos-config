@@ -17,6 +17,7 @@
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
+  nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     firefox
     brightnessctl
@@ -70,5 +71,6 @@
     ../../modules/user/waybar.nix
     ../../modules/user/fuzzel.nix
     ../../modules/user/neovim.nix
+    ../../modules/user/chromium.nix
   ];
 }
