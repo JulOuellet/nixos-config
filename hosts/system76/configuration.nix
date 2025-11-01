@@ -8,11 +8,16 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/system/stylix.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  environment.shells = with pkgs; [zsh];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
   
   hardware.opengl.enable = true;
   
@@ -50,6 +55,13 @@
     variant = "";
   };
 
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.julien = {
     isNormalUser = true;
@@ -65,9 +77,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-   wget
-git
-tree
+    wget
+  ];
+
+  fonts.packages = with pkgs; [
+    pkgs.nerd-fonts.hack
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

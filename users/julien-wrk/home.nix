@@ -66,5 +66,6 @@
     ../../modules/user/terminal/zsh.nix
     ../../modules/user/hyprland.nix
     ../../modules/user/waybar.nix
+    ../../modules/user/fuzzel.nix
   ];
 }
