@@ -32,6 +32,13 @@
           stylix.nixosModules.stylix
         ];
       };
+      nixos-system76 = lib.nixosSystem {
+        inherit system;
+	modules = [
+	  ./hosts/system76/configuration.nix
+	  stylix.nixosModules.stylix
+	];
+      };
     };
 
     homeConfigurations = {
@@ -41,6 +48,13 @@
           ./users/julien/home.nix
           stylix.homeModules.stylix
         ];
+      };
+      julien-wrk = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+	modules = [
+	  ./users/julien-wrk/home.nix
+	  stylix.homeModules.stylix
+	];
       };
     };
   };
