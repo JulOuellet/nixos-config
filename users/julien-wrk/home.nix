@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "julien";
@@ -67,5 +69,6 @@
     ../../modules/user/hyprland.nix
     ../../modules/user/waybar.nix
     ../../modules/user/fuzzel.nix
+    ../../modules/user/neovim.nix
   ];
 }
