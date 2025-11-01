@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./zsh.nix
+  ];
+
   programs.kitty = {
     enable = true;
 

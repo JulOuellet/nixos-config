@@ -3,6 +3,19 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./stylix.nix
+    ./waybar.nix
+    ./fuzzel.nix
+    ./terminal/kitty.nix
+  ];
+
+  home.packages = with pkgs; [
+    brightnessctl
+    pamixer
+    firefox
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
 
