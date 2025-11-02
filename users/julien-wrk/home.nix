@@ -18,6 +18,9 @@
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     slack
+    postman
+    mongodb-compass
+    dbeaver-bin
   ];
 
   home.file = {
