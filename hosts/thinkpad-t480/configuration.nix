@@ -1,30 +1,17 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
   pkgs,
   ...
 }: {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/system/base-config.nix
     ../../modules/system/stylix.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # I use zsh btw
-  environment.shells = with pkgs; [zsh];
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
-
-  # Needed this line, otherwise hyprland crashed when trying to launch
-  hardware.opengl.enable = true;
-
-  virtualisation.docker.enable = true;
 
   networking.hostName = "nixos-thinkpad"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -58,14 +45,6 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  };
-
-  # Audio
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
