@@ -21,6 +21,9 @@
     postman
     mongodb-compass
     dbeaver-bin
+    tree
+    docker
+    docker-compose
   ];
 
   home.file = {
@@ -39,5 +42,6 @@
     ../../modules/user/hyprland.nix
     ../../modules/user/neovim.nix
     ../../modules/user/chromium.nix
+    ../../modules/user/java.nix
   ];
 }

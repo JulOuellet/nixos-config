@@ -13,6 +13,7 @@
       gcc
       nodejs
       go
+      fd
 
       # lsp packages
       lua-language-server
@@ -23,6 +24,7 @@
       sqls
       templ
       pyright
+      jdt-language-server
 
       # formatter packages
       gofumpt
