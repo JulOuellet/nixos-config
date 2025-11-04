@@ -62,11 +62,23 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    openvpn
   ];
 
   fonts.packages = with pkgs; [
     pkgs.nerd-fonts.hack
   ];
+
+  # VPN
+  services.openvpn.servers = {
+    alfred-vpn = {
+      autoStart = false;
+      config = ''
+        config /etc/nixos/secrets/vpn/alfred_julien.ouellet@alfredtechnologies.com_vpn.ovpn
+        auth-user-pass /etc/nixos/secrets/vpn/creds.txt
+      '';
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
