@@ -4,9 +4,7 @@
     Hack Nerd Font,
     sans-serif;
   font-size: 15px;
-  border-radius: 8px;
-  padding-right: 10px;
-  padding-left: 10px;
+  border-radius: 0px;
 }
 
 .modules-right {
@@ -14,38 +12,51 @@
 }
 
 .modules-center {
-  background: #343f44;
+  background: #232a2e;
+  border-radius: 20px;
+  padding: 2px 15px;
+  margin: 3px 10px;
 }
 
 .modules-left {
-  background: #343f44;
+  background: #232a2e;
+  border-radius: 20px;
+  padding: 2px 15px;
+  margin: 3px 10px;
 }
 
 window#waybar {
-  background: transparent;
+  background: #343f44;
 }
 
+#battery {
+  padding: 0px 10px;
+}
 #battery.charging {
   color: #7fbbb3;
 }
-
 #battery.warning {
   color: #dbbc7f;
 }
-
 #battery.critical {
   color: #e67e80;
 }
 
+#pulseaudio {
+  padding: 0px 10px;
+}
+#pulseaudio-slider {
+  padding: 0px 10px;
+}
 #pulseaudio-slider slider {
   min-height: 0px;
   min-width: 0px;
   opacity: 0;
+  border-radius: 8px;
   background-image: none;
   border: none;
   box-shadow: none;
 }
-
 #pulseaudio-slider trough {
   min-height: 10px;
   min-width: 80px;
@@ -53,7 +64,6 @@ window#waybar {
   border-radius: 5px;
   background-color: #232a2e;
 }
-
 #pulseaudio-slider highlight {
   min-height: 0px;
   min-width: 0px;
@@ -62,32 +72,30 @@ window#waybar {
   background-color: #a7c080;
 }
 
+#language {
+  padding: 0px 10px;
+}
+
 #workspaces {
   background: transparent;
   padding: 0px;
 }
-
 #workspaces button {
-  background: #232a2e;
+  background: transparent;
   color: #d3c6aa;
   margin: 0px 2px;
-  padding: 5px 0px;
-  border-radius: 8px;
+  padding: 0px;
+  border-radius: 0px;
+  min-width: 20px;
   transition: all 0.3s ease;
 }
-
 #workspaces button.active {
-  background: #a7c080;
-  color: #2d353b;
+  color: #a7c080;
   font-weight: bold;
 }
-
 #workspaces button.urgent {
-  background: #e67e80;
-  color: #2d353b;
+  color: #e67e80;
 }
-
 #workspaces button:hover {
-  background: #414b50;
-  color: #d3c6aa;
+  color: #7fbbb3;
 }

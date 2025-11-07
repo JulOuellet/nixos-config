@@ -10,7 +10,7 @@
       {
         layer = "top";
         position = "top";
-        margin = "10 10 0 10";
+        margin = "0 0 0 0";
 
         modules-left = ["hyprland/workspaces"];
         modules-center = ["clock"];
@@ -53,7 +53,8 @@
 
         clock = {
           interval = 1;
-          format = "{:%a %d %b %Y | %H:%M:%S}";
+          format = "{:%A %H:%M:%S}";
+          tooltip-format = "{:%A, %B %d, %Y}";
         };
 
         "hyprland/language" = {
