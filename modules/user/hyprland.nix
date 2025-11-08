@@ -14,6 +14,7 @@
     brightnessctl
     pamixer
     firefox
+    hyprshot
   ];
 
   wayland.windowManager.hyprland = {
@@ -72,6 +73,11 @@
           ", XF86AudioRaiseVolume, exec, pamixer -i 5"
           ", XF86AudioLowerVolume, exec, pamixer -d 5"
           ", XF86AudioMute, exec, pamixer -t"
+
+          # Screenshot
+          ", F12, exec, hyprshot -m region --clipboard"
+          "SHIFT, F12, exec, hyprshot -m window --clipboard"
+          "CONTROL, F12, exec, hyprshot -m output --clipboard"
         ]
         ++ (
           builtins.concatLists (builtins.genList (
