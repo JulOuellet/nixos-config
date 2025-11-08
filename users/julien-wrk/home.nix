@@ -24,6 +24,7 @@
     tree
     docker
     docker-compose
+    awscli2
   ];
 
   home.file = {
