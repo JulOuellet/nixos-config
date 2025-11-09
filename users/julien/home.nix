@@ -17,8 +17,9 @@
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    tree # Cool to print project structures
-    postman # API testing
+    tree
+    postman
+    dbeaver-bin
   ];
 
   home.file = {
