@@ -21,6 +21,7 @@
     shellAliases = {
       ll = "ls -l";
       la = "ls -l -a";
+      ff = "fastfetch";
     };
 
     plugins = [

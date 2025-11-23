@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./zsh.nix
+    ./fastfetch.nix
   ];
 
   programs.kitty = {
