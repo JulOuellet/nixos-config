@@ -38,5 +38,6 @@
     ../../modules/user/hyprland.nix
     ../../modules/user/neovim.nix
     ../../modules/user/direnv.nix
+    ../../modules/user/npm.nix
   ];
 }
