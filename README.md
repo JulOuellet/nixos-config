@@ -10,24 +10,17 @@ TODO
 
 ```
 .
-├── flake.nix                           # Flake configuration with inputs and outputs
-├── flake.lock                          # Locked flake dependencies
-├── hosts/                              # Host-specific configurations
-│   └── thinkpad-t480/
-│       ├── configuration.nix           # Main system configuration for thinkpad-t480
-│       └── hardware-configuration.nix  # Hardware-specific settings for thinkpad-t480
-│       
-├── modules/                            # Reusable configuration modules
-│   ├── system/                         # System-level modules
-│   │   └── ...
-│   └── user/                           # User-level modules
-│       ├── assets/                     # User visual assets (css, wallpapers, etc.)
-│       │   └── ...
-│       └── ...
-│       
-└── users/                              # User-specific configurations
-    └── julien/
-        └── home.nix                    # Home Manager configuration for user 'julien'
+├── flake.nix             # Main entry point for NixOS configurations, defining the different outputs of the flake
+├── hosts/                # Contains hardware-specific configurations for each computer
+│   ├── system76/         # Configuration for my system76 work computer
+│   └── thinkpad-t480/    # Configuration for my ThinkPad T480 personal laptop
+├── modules/              # Holds shared configuration modules
+│   ├── system/           # System-wide modules
+│   └── user/             # User-specific modules
+├── users/                # Contains user-specific configurations
+│   ├── julien/           # Personal user configuration
+│   └── julien-wrk/       # Work user configuration
+└── ... (other files and directories)
 ```
 
 ## Installation
