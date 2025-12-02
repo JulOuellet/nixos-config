@@ -15,6 +15,13 @@
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    name = "Adwaita";
+    package = pkgs.adwaita-icon-theme;
+    size = 24;
+  };
+
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     tree

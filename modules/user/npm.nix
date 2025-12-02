@@ -24,7 +24,7 @@ in {
 
   home.sessionPath = ["${npmGlobalDir}/bin"];
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     export PATH="$HOME/.npm-global/bin:$PATH"
   '';
 }
