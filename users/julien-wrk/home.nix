@@ -25,7 +25,15 @@
     docker
     docker-compose
     awscli2
+    claude-code
   ];
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    name = "Adwaita";
+    package = pkgs.adwaita-icon-theme;
+    size = 24;
+  };
 
   home.file = {
     # ".screenrc".source = dotfiles/screenrc;
