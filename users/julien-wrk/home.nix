@@ -26,6 +26,7 @@
     docker-compose
     awscli2
     claude-code
+    python3Packages.pip
   ];
 
   home.pointerCursor = {
@@ -52,5 +53,6 @@
     ../../modules/user/neovim.nix
     ../../modules/user/chromium.nix
     ../../modules/user/java.nix
+    ../../modules/user/python.nix
   ];
 }

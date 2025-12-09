@@ -10,5 +10,8 @@
 
   home.packages = with pkgs; [
     maven
+    jdt-language-server
+    vscode-extensions.vscjava.vscode-java-debug
+    vscode-extensions.vscjava.vscode-java-test
   ];
 }
