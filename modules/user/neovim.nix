@@ -25,6 +25,7 @@
       templ
       pyright
       jdt-language-server
+      nodePackages.typescript-language-server
 
       # formatter packages
       gofumpt
@@ -36,6 +37,22 @@
       jq
       shfmt
       ruff
+
+      (tree-sitter.withPlugins (p: [
+        p.tree-sitter-lua
+        p.tree-sitter-nix
+        p.tree-sitter-css
+        p.tree-sitter-html
+        p.tree-sitter-json
+        p.tree-sitter-go
+        p.tree-sitter-templ
+        p.tree-sitter-sql
+        p.tree-sitter-python
+        p.tree-sitter-java
+        p.tree-sitter-javascript
+        p.tree-sitter-typescript
+        p.tree-sitter-bash
+      ]))
     ];
   };
 
