@@ -52,6 +52,11 @@
         p.tree-sitter-javascript
         p.tree-sitter-typescript
         p.tree-sitter-bash
+        p.tree-sitter-markdown
+        p.tree-sitter-markdown-inline
+        p.tree-sitter-latex
+        p.tree-sitter-typst
+        p.tree-sitter-yaml
       ]))
     ];
   };
