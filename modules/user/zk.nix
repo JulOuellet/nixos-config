@@ -8,7 +8,12 @@
 
     settings = {
       notebook = {
-        dir = "~/notes";
+        dir = "~/zk-notebook";
+      };
+
+      note = {
+        filename = ''{{format-date now "%Y%m%d%H%M"}}-{{slug title}}'';
+        extension = "md";
       };
     };
   };
