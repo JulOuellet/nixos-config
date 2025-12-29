@@ -12,7 +12,7 @@
 
       directory = {
         format = "[$path]($style) ";
-        style = "bold cyan";
+        style = "bold blue";
         truncation_length = 3;
         truncate_to_repo = true;
       };
