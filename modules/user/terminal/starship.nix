@@ -8,7 +8,7 @@
     settings = {
       format = "$directory$git_branch$git_status$character";
 
-      add_newline = true;
+      add_newline = false;
 
       directory = {
         format = "[$path]($style) ";
@@ -24,18 +24,17 @@
       };
 
       git_status = {
-        format = "([\\[$all_status$ahead_behind\\]]($style) )";
-        style = "bold red";
-        conflicted = "=";
-        ahead = "⇡\${count}";
-        behind = "⇣\${count}";
-        diverged = "⇕⇡\${ahead_count}⇣\${behind_count}";
-        untracked = "?\${count}";
-        stashed = "$";
-        modified = "!\${count}";
-        staged = "+\${count}";
-        renamed = "»\${count}";
-        deleted = "✘\${count}";
+        format = "([$all_status$ahead_behind]($style) )";
+        conflicted = "[=\${count}](bold red)";
+        ahead = "[⇡\${count}](bold cyan)";
+        behind = "[⇣\${count}](bold cyan)";
+        diverged = "[⇕⇡\${ahead_count}⇣\${behind_count}](bold cyan)";
+        untracked = "[?\${count}](bold blue)";
+        stashed = "[$\${count}](bold magenta)";
+        modified = "[!\${count}](bold yellow)";
+        staged = "[+\${count}](bold green)";
+        renamed = "[»\${count}](bold cyan)";
+        deleted = "[✘\${count}](bold red)";
       };
 
       character = {
