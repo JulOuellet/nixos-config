@@ -6,7 +6,7 @@
   programs.starship = {
     enable = true;
     settings = {
-      format = "$directory$git_branch$git_status$character";
+      format = "$nix_shell$directory$git_branch$git_status$character";
 
       add_newline = false;
 
