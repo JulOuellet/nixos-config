@@ -20,6 +20,8 @@
     slack
     postman
     mongodb-compass
+    mongosh
+    mongodb-tools
     dbeaver-bin
     tree
     docker
