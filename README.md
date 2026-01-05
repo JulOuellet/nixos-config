@@ -8,7 +8,7 @@ TODO
 
 ## Structure
 
-```
+```bash
 .
 ├── flake.nix             # Main entry point for NixOS configurations, defining the different outputs of the flake
 ├── hosts/                # Contains hardware-specific configurations for each computer

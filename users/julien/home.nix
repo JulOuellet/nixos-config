@@ -46,5 +46,6 @@
     ../../modules/user/neovim.nix
     ../../modules/user/direnv.nix
     ../../modules/user/npm.nix
+    ../../modules/user/zk.nix
   ];
 }

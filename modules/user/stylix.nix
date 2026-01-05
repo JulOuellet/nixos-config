@@ -20,6 +20,7 @@
       neovim.enable = false; # let neovim configure its own theme
       fuzzel.enable = true;
       gtk.enable = true;
+      starship.enable = true;
     };
 
     fonts.sizes = {
