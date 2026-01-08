@@ -56,5 +56,6 @@
     ../../modules/user/chromium.nix
     ../../modules/user/java.nix
     ../../modules/user/python.nix
+    ../../modules/user/btop.nix
   ];
 }
