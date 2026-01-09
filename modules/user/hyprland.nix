@@ -8,6 +8,7 @@
     ./waybar.nix
     ./fuzzel.nix
     ./terminal/kitty.nix
+    ./hyprlock.nix
   ];
 
   home.packages = with pkgs; [
@@ -109,7 +110,11 @@
         "HDMI-A-2,1920x1080@60,0x0,1"
       ];
 
-      exec-once = "waybar";
+      exec-once = [
+        #"hypridle"
+        "hyprlock"
+        "waybar"
+      ];
     };
 
     extraConfig = ''

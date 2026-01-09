@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ../../modules/system/base-config.nix
     ../../modules/system/stylix.nix
+    ../../modules/system/greetd.nix
   ];
 
   # Bootloader.
