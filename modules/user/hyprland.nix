@@ -66,6 +66,9 @@
           # Toggle floating windows
           "$mod, F, togglefloating"
 
+          # Lock screen
+          "$mod, L, exec, hyprlock"
+
           # Brightness
           ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
           ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"

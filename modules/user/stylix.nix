@@ -21,6 +21,7 @@
       fuzzel.enable = true;
       gtk.enable = true;
       starship.enable = true;
+      hyprlock.enable = false;
     };
 
     fonts.sizes = {
