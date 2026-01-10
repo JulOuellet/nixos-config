@@ -28,17 +28,18 @@
           dots_center = true;
           fade_on_empty = false;
 
-          # Everforest Colors
-          font_color = "rgb(211, 198, 170)"; # fg (Warm White)
-          inner_color = "rgb(43, 51, 57)"; # bg_dim (Dark Green/Grey)
-          outer_color = "rgb(167, 192, 128)"; # green (Accent)
-          check_color = "rgb(219, 188, 127)"; # yellow
-          fail_color = "rgb(230, 126, 128)"; # red
+          # Shape & Border
+          rounding = 0;
+          outline_thickness = 0;
 
-          outline_thickness = 3;
-          placeholder_text = "<i>Password...</i>";
+          # Colors (Everforest Dark)
+          font_color = "rgb(211, 198, 170)";
+          inner_color = "rgb(43, 51, 57)";
+          check_color = "rgb(167, 192, 128)";
+          fail_color = "rgb(230, 126, 128)";
 
-          # Shadow removed
+          placeholder_text = "Type password";
+
           shadow_passes = 0;
         }
       ];
