@@ -6,7 +6,7 @@
   imports = [
     ./stylix.nix
     ./waybar.nix
-    ./fuzzel.nix
+    ./walker.nix
     ./terminal/kitty.nix
     ./hyprlock.nix
   ];
@@ -40,7 +40,7 @@
           # Open and close programs
           "$mod, RETURN, exec, kitty"
           "$mod, W, exec, firefox"
-          "$mod, D, exec, fuzzel"
+          "$mod, D, exec, walker"
           "$mod, Q, killactive"
 
           # Change focus

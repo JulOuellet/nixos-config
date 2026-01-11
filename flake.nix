@@ -11,6 +11,7 @@
       url = "github:danth/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    walker.url = "github:abenz1267/walker";
   };
 
   outputs = {
@@ -18,6 +19,7 @@
     nixpkgs,
     home-manager,
     stylix,
+    walker,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -27,6 +29,7 @@
     nixosConfigurations = {
       nixos-thinkpad = lib.nixosSystem {
         inherit system;
+        specialArgs = {inherit walker;};
         modules = [
           ./hosts/thinkpad-t480/configuration.nix
           stylix.nixosModules.stylix
@@ -34,6 +37,7 @@
       };
       nixos-system76 = lib.nixosSystem {
         inherit system;
+        specialArgs = {inherit walker;};
         modules = [
           ./hosts/system76/configuration.nix
           stylix.nixosModules.stylix
@@ -44,6 +48,7 @@
     homeConfigurations = {
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = {inherit walker;};
         modules = [
           ./users/julien/home.nix
           stylix.homeModules.stylix
@@ -51,6 +56,7 @@
       };
       julien-wrk = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = {inherit walker;};
         modules = [
           ./users/julien-wrk/home.nix
           stylix.homeModules.stylix
