@@ -5,11 +5,14 @@
 }: {
   programs.git = {
     enable = true;
-    userName = "Julien ouellet";
-    userEmail = "julienouellet@iusevimbtw.com";
-    extraConfig = {
+    settings = {
       pull.rebase = false;
       init.defaultBranch = "main";
+
+      user = {
+        name = "Julien ouellet";
+        email = "julienouellet@iusevimbtw.com";
+      };
     };
   };
 }

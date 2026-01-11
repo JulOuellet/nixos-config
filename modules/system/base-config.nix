@@ -9,7 +9,7 @@
   programs.zsh.enable = true;
 
   # Needed this line, otherwise hyprland crashed when trying to launch
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   # Audio
   services.pipewire = {
