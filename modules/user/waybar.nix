@@ -25,7 +25,7 @@
           interval = 10;
 
           format = "{capacity}% {icon}";
-          format-charging = "{capacity}%  {time}";
+          format-charging = "{capacity}% ";
           format-icons = ["" "" "" "" ""];
 
           states = {

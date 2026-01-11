@@ -3,7 +3,7 @@
   font-family:
     Hack Nerd Font,
     sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 0px;
 }
 
@@ -12,10 +12,7 @@
 }
 
 .modules-center {
-  background: #232a2e;
-  border-radius: 20px;
-  padding: 0px 15px;
-  margin: 3px 10px;
+  background: #343f44;
 }
 
 .modules-left {
