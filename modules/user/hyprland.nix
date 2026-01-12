@@ -9,12 +9,12 @@
     ./walker.nix
     ./terminal/kitty.nix
     ./hyprlock.nix
+    ./zen.nix
   ];
 
   home.packages = with pkgs; [
     brightnessctl
     pamixer
-    firefox
     hyprshot
   ];
 
@@ -39,7 +39,7 @@
         [
           # Open and close programs
           "$mod, RETURN, exec, kitty"
-          "$mod, W, exec, firefox"
+          "$mod, W, exec, zen"
           "$mod, D, exec, walker"
           "$mod, Q, killactive"
 

@@ -16,7 +16,7 @@
       kitty.enable = true;
       waybar.enable = false; # Waybar is customized from its style.css file
       hyprland.enable = true;
-      firefox.enable = true;
+      zen-browser.enable = false;
       neovim.enable = false; # let neovim configure its own theme
       gtk.enable = true;
       starship.enable = true;

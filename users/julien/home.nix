@@ -27,6 +27,7 @@
     tree
     postman
     dbeaver-bin
+    firefox
   ];
 
   home.file = {
