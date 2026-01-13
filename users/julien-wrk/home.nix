@@ -29,6 +29,7 @@
     awscli2
     claude-code
     python3Packages.pip
+    libnotify
   ];
 
   home.pointerCursor = {
@@ -57,5 +58,6 @@
     ../../modules/user/java.nix
     ../../modules/user/python.nix
     ../../modules/user/btop.nix
+    ../../modules/user/mako.nix
   ];
 }

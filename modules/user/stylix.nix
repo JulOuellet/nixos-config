@@ -21,6 +21,7 @@
       gtk.enable = true;
       starship.enable = true;
       hyprlock.enable = false;
+      mako.enable = true;
     };
 
     fonts.sizes = {
