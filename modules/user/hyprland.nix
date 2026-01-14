@@ -100,10 +100,14 @@
       };
 
       monitor = [
-        "eDP-1,1920x1080@60,4480x0,1.2"
-        "DP-1,2560x1440@144,1920x0,1"
-        "HDMI-A-2,1920x1080@60,0x0,1"
+        "eDP-1,1920x1080@60,4640x0,1.2"
+        "DP-1,2560x1440@144,1080x240,1"
+        "HDMI-A-3,1920x1080@60,0x0,1,transform,1"
       ];
+
+      cursor = {
+        no_hardware_cursors = true;
+      };
 
       exec-once = [
         #"hypridle"
