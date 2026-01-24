@@ -81,11 +81,10 @@
       };
       julien-ubuntu = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit walker zen-browser firefox-addons;};
+        extraSpecialArgs = {};
         modules = [
           ./users/julien-ubuntu/home.nix
           stylix.homeModules.stylix
-          zen-browser.homeModules.default
           {targets.genericLinux.enable = true;}
         ];
       };

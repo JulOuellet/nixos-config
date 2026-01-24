@@ -17,25 +17,21 @@
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    # tree
-    # postman
-    # dbeaver-bin
-    # firefox
   ];
 
   home.file = {
-    # ".screenrc".source = dotfiles/screenrc;
   };
 
   home.sessionVariables = {
-    # EDITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  
+  targets.genericLinux.enable = true;
 
   imports = [
     ../../modules/user/git.nix
-    ../../modules/user/chromium.nix
+    ../../modules/user/terminal/zsh.nix
   ];
 }
