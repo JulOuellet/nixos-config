@@ -25,6 +25,8 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvim-config.url = "github:JulOuellet/nvim-config";
   };
 
   outputs = {
@@ -35,6 +37,7 @@
     walker,
     zen-browser,
     firefox-addons,
+    nvim-config,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -63,7 +66,7 @@
     homeConfigurations = {
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit walker zen-browser firefox-addons;};
+        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config;};
         modules = [
           ./users/julien/home.nix
           stylix.homeModules.stylix
@@ -72,7 +75,7 @@
       };
       julien-wrk = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit walker zen-browser firefox-addons;};
+        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config;};
         modules = [
           ./users/julien-wrk/home.nix
           stylix.homeModules.stylix
@@ -81,7 +84,7 @@
       };
       julien-ubuntu = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {};
+        extraSpecialArgs = {inherit system nvim-config;};
         modules = [
           ./users/julien-ubuntu/home.nix
           stylix.homeModules.stylix
