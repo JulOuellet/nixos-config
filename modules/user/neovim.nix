@@ -11,5 +11,8 @@
     extraPackages = nvim-config.packages.${system}.deps;
   };
 
-  xdg.configFile."nvim".source = nvim-config;
+  xdg.configFile."nvim".source =
+    if config.home.username == "julien"
+    then config.lib.file.mkOutOfStoreSymlink "/home/julien/.nvim/nvim-config"
+    else nvim-config;
 }
