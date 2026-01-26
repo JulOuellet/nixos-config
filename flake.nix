@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:danth/stylix/release-25.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     walker.url = "github:abenz1267/walker";
 
     zen-browser = {
@@ -27,17 +22,19 @@
     };
 
     nvim-config.url = "github:JulOuellet/nvim-config";
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    stylix,
     walker,
     zen-browser,
     firefox-addons,
     nvim-config,
+    catppuccin,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -50,7 +47,6 @@
         specialArgs = {inherit walker zen-browser firefox-addons;};
         modules = [
           ./hosts/thinkpad-t480/configuration.nix
-          stylix.nixosModules.stylix
         ];
       };
       nixos-system76 = lib.nixosSystem {
@@ -58,7 +54,6 @@
         specialArgs = {inherit walker zen-browser firefox-addons;};
         modules = [
           ./hosts/system76/configuration.nix
-          stylix.nixosModules.stylix
         ];
       };
     };
@@ -66,11 +61,12 @@
     homeConfigurations = {
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config;};
+        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config catppuccin;};
         modules = [
           ./users/julien/home.nix
-          stylix.homeModules.stylix
           zen-browser.homeModules.default
+          catppuccin.homeModules.catppuccin
+          ./modules/user/catppuccin.nix
         ];
       };
       julien-wrk = home-manager.lib.homeManagerConfiguration {
@@ -78,7 +74,6 @@
         extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config;};
         modules = [
           ./users/julien-wrk/home.nix
-          stylix.homeModules.stylix
           zen-browser.homeModules.default
         ];
       };
@@ -87,7 +82,6 @@
         extraSpecialArgs = {inherit system nvim-config;};
         modules = [
           ./users/julien-ubuntu/home.nix
-          stylix.homeModules.stylix
           {targets.genericLinux.enable = true;}
         ];
       };

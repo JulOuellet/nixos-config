@@ -4,12 +4,12 @@
   ...
 }: {
   imports = [
-    ./stylix.nix
     ./waybar.nix
     ./walker.nix
     ./terminal/kitty.nix
     ./hyprlock.nix
     ./zen.nix
+    ./hyprpaper.nix
   ];
 
   home.packages = with pkgs; [
@@ -111,6 +111,7 @@
 
       exec-once = [
         #"hypridle"
+        "hyprpaper"
         "hyprlock"
         "waybar"
       ];

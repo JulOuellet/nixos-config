@@ -25,4 +25,8 @@
 
   # Enable docker
   virtualisation.docker.enable = true;
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
 }

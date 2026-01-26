@@ -6,7 +6,6 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/system/base-config.nix
-    ../../modules/system/stylix.nix
     ../../modules/system/thunar.nix
   ];
 
