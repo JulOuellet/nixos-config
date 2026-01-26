@@ -4,7 +4,9 @@
   nvim-config,
   system,
   ...
-}: {
+}: let
+  localConfigPath = "/home/julien/.nvim/nvim-config";
+in {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -12,7 +14,7 @@
   };
 
   xdg.configFile."nvim".source =
-    if config.home.username == "julien"
-    then config.lib.file.mkOutOfStoreSymlink "/home/julien/.nvim/nvim-config"
+    if builtins.pathExists localConfigPath
+    then config.lib.file.mkOutOfStoreSymlink localConfigPath
     else nvim-config;
 }
