@@ -1,50 +1,130 @@
 * {
   border: none;
   font-family:
-    Hack Nerd Font,
-    sans-serif;
+    JetBrains Mono Nerd Font,
+    monospace;
   font-size: 14px;
   border-radius: 0px;
 }
 
-.modules-right {
-  background: #343f44;
-}
+/* Catppuccin Frappe Colors:
+ * Base: #303446
+ * Mantle: #292c3c
+ * Crust: #232634
+ * Surface0: #414559
+ * Surface1: #51576d
+ * Overlay0: #737994
+ * Text: #c6d0f5
+ * Lavender: #babbf1
+ * Blue: #8caaee
+ * Sapphire: #85c1dc
+ * Sky: #99d1db
+ * Teal: #81c8be
+ * Green: #a6d189
+ * Yellow: #e5c890
+ * Peach: #ef9f76
+ * Maroon: #ea999c
+ * Red: #e78284
+ * Mauve: #ca9ee6
+ * Pink: #f4b8e4
+ */
 
-.modules-center {
-  background: #343f44;
+window#waybar {
+  background: transparent;
 }
 
 .modules-left {
-  background: #232a2e;
-  border-radius: 20px;
-  padding: 0px 15px;
-  margin: 3px 10px;
+  background: rgba(48, 52, 70, 0.95);
+  border-radius: 8px;
+  padding: 4px 12px;
+  margin: 5px 0px 0px 10px;
 }
 
-window#waybar {
-  background: #343f44;
+.modules-center {
+  background: rgba(48, 52, 70, 0.95);
+  border-radius: 8px;
+  padding: 4px 12px;
+  margin: 5px 0px 0px 0px;
 }
 
-#battery {
+.modules-right {
+  background: rgba(48, 52, 70, 0.95);
+  border-radius: 8px;
+  padding: 4px 12px;
+  margin: 5px 10px 0px 0px;
+}
+
+/* Workspaces */
+#workspaces {
+  background: transparent;
+  padding: 0px;
+}
+
+#workspaces button {
+  background: transparent;
+  color: #626880;
+  margin: 0px 2px;
+  padding: 0px 4px;
+  border-radius: 0px;
+  min-width: 0px;
+  transition: color 0.2s ease;
+}
+
+#workspaces button.active {
+  background: transparent;
+  color: #c6d0f5;
+}
+
+#workspaces button.urgent {
+  background: transparent;
+  color: #e78284;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  color: #8caaee;
+}
+
+/* Clock */
+#clock {
   padding: 0px 10px;
-}
-#battery.charging {
-  color: #7fbbb3;
-}
-#battery.warning {
-  color: #dbbc7f;
-}
-#battery.critical {
-  color: #e67e80;
+  color: #c6d0f5;
 }
 
+/* Language */
+#language {
+  padding: 0px 10px;
+  color: #c6d0f5;
+}
+
+/* Network */
+#network {
+  padding: 0px 10px;
+  color: #c6d0f5;
+}
+
+#network.disconnected {
+  color: #e78284;
+}
+
+#network.disabled {
+  color: #838ba7;
+}
+
+/* PulseAudio */
 #pulseaudio {
   padding: 0px 10px;
+  color: #c6d0f5;
 }
+
+#pulseaudio.muted {
+  color: #e78284;
+}
+
 #pulseaudio-slider {
   padding: 0px 10px;
 }
+
 #pulseaudio-slider slider {
   min-height: 0px;
   min-width: 0px;
@@ -54,45 +134,71 @@ window#waybar {
   border: none;
   box-shadow: none;
 }
+
 #pulseaudio-slider trough {
-  min-height: 10px;
+  min-height: 8px;
   min-width: 80px;
   padding: 0px;
-  border-radius: 5px;
-  background-color: #232a2e;
+  border-radius: 4px;
+  background-color: #414559;
 }
+
 #pulseaudio-slider highlight {
   min-height: 0px;
   min-width: 0px;
   padding: 0px;
-  border-radius: 5px;
-  background-color: #a7c080;
+  border-radius: 4px;
+  background-color: #8caaee;
 }
 
-#language {
+/* Battery */
+#battery {
+  padding: 0px 10px;
+  color: #c6d0f5;
+}
+
+#battery.charging {
+  color: #a6d189;
+}
+
+#battery.warning {
+  color: #e5c890;
+}
+
+#battery.critical {
+  color: #e78284;
+  font-weight: bold;
+}
+
+/* CPU */
+#cpu {
+  padding: 0px 10px;
+  color: #c6d0f5;
+}
+
+/* Memory */
+#memory {
+  padding: 0px 10px;
+  color: #c6d0f5;
+}
+
+/* Tray */
+#tray {
   padding: 0px 10px;
 }
 
-#workspaces {
-  background: transparent;
-  padding: 0px;
+#tray > .passive {
+  color: #838ba7;
 }
-#workspaces button {
-  background: transparent;
-  color: #d3c6aa;
-  margin: 0px 2px;
-  padding: 0px;
-  border-radius: 0px;
-  min-width: 20px;
-  transition: all 0.3s ease;
+
+#tray > .active {
+  color: #c6d0f5;
 }
-#workspaces button.active {
-  color: #a7c080;
-  font-weight: bold;
-}
-#workspaces button.urgent {
-  color: #e67e80;
-}
-#workspaces button:hover {
-  color: #7fbbb3;
+
+/* Custom modules styling */
+#custom-notification,
+#custom-power,
+#custom-weather {
+  padding: 0px 10px;
+  color: #c6d0f5;
 }

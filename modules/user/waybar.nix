@@ -16,6 +16,7 @@
         modules-center = ["clock"];
         modules-right = [
           "hyprland/language"
+          "network"
           "pulseaudio"
           "pulseaudio/slider"
           "battery"
@@ -62,6 +63,30 @@
           format-en = "en";
           format-fr = "fr";
           tooltip-format = "Keyboard: {}";
+        };
+
+        network = {
+          interval = 3;
+
+          format-wifi = "{icon} {signalStrength}%";
+          format-ethernet = "󰈀";
+          format-disconnected = "󰤮";
+
+          format-icons = [
+            "󰤯" # 0-20%
+            "󰤟" # 21-40%
+            "󰤢" # 41-60%
+            "󰤥" # 61-80%
+            "󰤨" # 81-100%
+          ];
+
+          # Detailed Tooltips
+          tooltip-format = "{ifname}: {ipaddr}/{cidr}";
+          tooltip-format-wifi = "󰤨  {essid} ({signalStrength}%)\n󰩟 {ipaddr}/{cidr}\n󱂇 {gwaddr}";
+          tooltip-format-ethernet = "󰈀 {ifname}\n󰩟 {ipaddr}/{cidr}";
+          tooltip-format-disconnected = "󰤮  Disconnected";
+
+          on-click = "nm-connection-editor";
         };
       }
     ];
