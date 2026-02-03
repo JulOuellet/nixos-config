@@ -17,7 +17,10 @@
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
   ];
+
+  fonts.fontconfig.enable = true;
 
   home.file = {
   };
