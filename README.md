@@ -2,10 +2,6 @@
 
 My personal NixOS configuration with Home Manager.
 
-## Overview
-
-TODO
-
 ## Structure
 
 ```bash
@@ -22,10 +18,6 @@ TODO
 │   └── julien-wrk/       # Work user configuration
 └── ... (other files and directories)
 ```
-
-## Installation
-
-TODO
 
 ## Usage
 
@@ -50,45 +42,45 @@ home-manager switch --flake .
 nix flake update
 ```
 
-## Customizing Powerlevel10k
+## Generic Linux config 
 
-The Powerlevel10k configuration is managed through Home Manager but requires special handling since it's not 100% declarative.
+Here are the steps to use nix and home-manager to configure dotfiles and shell environment on non-NixOS systems (like for my work Ubuntu system):
 
-### Current configuration
-The p10k config is stored in `modules/user/terminal/p10k-config/p10k.zsh` and automatically deployed through the zsh plugin system.
+### Install Nix and enable flakes:
+```bash
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+mkdir -p ~/.config/nix
+echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+```
 
-### Making changes
+### Clone the repository
+```bash
+git clone git@github.com:JulOuellet/nixos-config.git ~/nix-config
+```
 
-#### Option 1: Edit directly (recommended for small changes)
-1. Edit the configuration file:
-   ```bash
-   nano ~/.dotfiles/modules/user/terminal/p10k-config/p10k.zsh
-   ```
+> [!NOTE]
+> Since we let home-manager manage the git config, in most cases we will need to:
+> 1. Install git via the system package manager
+> 2. Clone the repository using https since ssh is most likely not configured
+> 3. Delete git via the system package manager
+> 4. Proceed with the installation
+>
+> Example:
+> ```bash
+> sudo apt install git
+> git clone https://github.com/JulOuellet/nixos-config.git
+> sudo apt remove git
+> ```
 
-2. Apply changes:
-   ```bash
-   home-manager switch --flake .
-   ```
+### Apply the home-manager configuration
+```bash
+cd ~/nix-config
+nix run github:nix-community/home-manager/release-25.11 -- switch --flake .#julien-ubuntu
+home-manager switch --flake .#julien-ubuntu
+```
 
-#### Option 2: Use the configuration wizard (for major changes)
-1. Run the interactive wizard:
-   ```bash
-   p10k configure
-   ```
-
-2. Go through the configuration process
-
-3. Copy the generated config back to your dotfiles:
-   ```bash
-   cp ~/.p10k.zsh ~/.dotfiles/modules/user/terminal/p10k-config/p10k.zsh
-   ```
-
-4. Apply the changes:
-   ```bash
-   home-manager switch --flake .
-   ```
-
-### Important notes
-- Always edit the file in your dotfiles directory, not `~/.p10k.zsh`
-- The wizard creates `~/.p10k.zsh`, but Home Manager manages the actual config through the plugin system
-
+### Tell the terminal to use zsh
+```bash
+command -v zsh | sudo tee -a /etc/shells
+chsh -s $(which zsh)
+```
