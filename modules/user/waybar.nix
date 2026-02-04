@@ -44,6 +44,8 @@
 
           tooltip = true;
           tooltip-format = "Volume: {volume}%";
+
+          # on-click = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
         };
 
         pulseaudio-slider = {
@@ -86,7 +88,7 @@
           tooltip-format-ethernet = "󰈀 {ifname}\n󰩟 {ipaddr}/{cidr}";
           tooltip-format-disconnected = "󰤮  Disconnected";
 
-          on-click = "nm-connection-editor";
+          # on-click = "nm-connection-editor";
         };
       }
     ];
