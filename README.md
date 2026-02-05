@@ -7,15 +7,14 @@ My personal NixOS configuration with Home Manager.
 ```bash
 .
 ├── flake.nix             # Main entry point for NixOS configurations, defining the different outputs of the flake
-├── hosts/                # Contains hardware-specific configurations for each computer
-│   ├── system76/         # Configuration for my system76 work computer
+├── hosts/                # Contains hardware-specific configurations for computers running NixOS
 │   └── thinkpad-t480/    # Configuration for my ThinkPad T480 personal laptop
 ├── modules/              # Holds shared configuration modules
 │   ├── system/           # System-wide modules
 │   └── user/             # User-specific modules
 ├── users/                # Contains user-specific configurations
 │   ├── julien/           # Personal user configuration
-│   └── julien-wrk/       # Work user configuration
+│   └── julien-ubuntu/    # Ubuntu user configuration
 └── ... (other files and directories)
 ```
 
