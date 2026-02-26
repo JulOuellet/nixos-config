@@ -24,6 +24,8 @@
     nvim-config.url = "github:JulOuellet/nvim-config";
 
     catppuccin.url = "github:catppuccin/nix";
+
+    claude-code.url = "github:sadjow/claude-code-nix";
   };
 
   outputs = {
@@ -35,6 +37,7 @@
     firefox-addons,
     nvim-config,
     catppuccin,
+    claude-code,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -44,16 +47,9 @@
     nixosConfigurations = {
       nixos-thinkpad = lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit walker zen-browser firefox-addons;};
+        specialArgs = {};
         modules = [
           ./hosts/thinkpad-t480/configuration.nix
-        ];
-      };
-      nixos-system76 = lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit walker zen-browser firefox-addons;};
-        modules = [
-          ./hosts/system76/configuration.nix
         ];
       };
     };
@@ -61,7 +57,7 @@
     homeConfigurations = {
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config catppuccin;};
+        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config catppuccin claude-code;};
         modules = [
           ./users/julien/home.nix
           zen-browser.homeModules.default
@@ -69,14 +65,7 @@
           ./modules/user/catppuccin.nix
         ];
       };
-      julien-wrk = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config;};
-        modules = [
-          ./users/julien-wrk/home.nix
-          zen-browser.homeModules.default
-        ];
-      };
+
       julien-ubuntu = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {inherit system nvim-config;};
