@@ -3,6 +3,7 @@
 in {
   xdg.configFile."hypr/hyprpaper.conf".text = ''
     ipc = on
+    splash = 0
 
     wallpaper {
       monitor = eDP-1
