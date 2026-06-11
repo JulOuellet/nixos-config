@@ -54,5 +54,6 @@
     ../../modules/user/terminal/zsh.nix
     ../../modules/user/neovim.nix
     ../../modules/user/btop.nix
+    ../../modules/user/zk.nix
   ];
 }
