@@ -3,13 +3,11 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./zsh.nix
-    ./fastfetch.nix
-  ];
-
   programs.kitty = {
     enable = true;
+
+    # Wraps kitty with nixGL on generic Linux; no-op on NixOS.
+    package = config.lib.nixGL.wrap pkgs.kitty;
 
     settings = {
       window_padding_width = 5;

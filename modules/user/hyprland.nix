@@ -7,6 +7,8 @@
     ./waybar.nix
     ./walker.nix
     ./terminal/kitty.nix
+    ./terminal/zsh.nix
+    ./terminal/fastfetch.nix
     ./hyprlock.nix
     ./zen.nix
     ./hyprpaper.nix

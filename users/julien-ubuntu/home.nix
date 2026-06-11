@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  nixgl,
   ...
 }: {
   home.username = "julien";
@@ -14,6 +15,10 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "25.11"; # Please read the comment before changing.
+
+  # nixGL lets Nix-built GUI apps find Ubuntu's system GL drivers.
+  targets.genericLinux.nixGL.packages = nixgl.packages;
+  targets.genericLinux.nixGL.defaultWrapper = "nvidia";
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
@@ -55,5 +60,6 @@
     ../../modules/user/neovim.nix
     ../../modules/user/btop.nix
     ../../modules/user/zk.nix
+    ../../modules/user/terminal/kitty.nix
   ];
 }

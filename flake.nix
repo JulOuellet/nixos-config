@@ -26,6 +26,8 @@
     catppuccin.url = "github:catppuccin/nix";
 
     claude-code.url = "github:sadjow/claude-code-nix";
+
+    nixgl.url = "github:nix-community/nixGL";
   };
 
   outputs = {
@@ -38,6 +40,7 @@
     nvim-config,
     catppuccin,
     claude-code,
+    nixgl,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -68,7 +71,7 @@
 
       julien-ubuntu = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit system nvim-config;};
+        extraSpecialArgs = {inherit system nvim-config nixgl;};
         modules = [
           ./users/julien-ubuntu/home.nix
           {targets.genericLinux.enable = true;}
