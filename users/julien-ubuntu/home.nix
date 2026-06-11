@@ -18,6 +18,8 @@
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    pulumi
+    gh
   ];
 
   fonts.fontconfig.enable = true;
@@ -26,6 +28,20 @@
   };
 
   home.sessionVariables = {
+  };
+
+  programs.zsh = {
+    initExtra = ''
+      eval "$(${pkgs.mise}/bin/mise activate zsh)"
+
+      # SDKMAN! initialization
+      export SDKMAN_DIR="$HOME/.sdkman"
+      [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+    '';
+
+    shellAliases = {
+      vpn-status = "openvpn3 sessions-list";
+    };
   };
 
   # Let Home Manager install and manage itself.
@@ -37,5 +53,6 @@
     ../../modules/user/git.nix
     ../../modules/user/terminal/zsh.nix
     ../../modules/user/neovim.nix
+    ../../modules/user/btop.nix
   ];
 }
