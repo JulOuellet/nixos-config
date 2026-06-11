@@ -1,6 +1,8 @@
 {
   config,
   pkgs,
+  claude-code,
+  system,
   ...
 }: {
   home.username = "julien";
@@ -28,6 +30,7 @@
     postman
     dbeaver-bin
     firefox
+    claude-code.packages.${system}.default
   ];
 
   home.file = {

@@ -8,5 +8,6 @@
     flavor = "frappe";
 
     nvim.enable = false;
+    hyprland.enable = false;
   };
 }

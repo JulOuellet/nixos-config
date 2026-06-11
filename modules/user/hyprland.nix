@@ -16,11 +16,11 @@
     brightnessctl
     pamixer
     hyprshot
+    wl-clipboard
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-
     settings = {
       "$mod" = "SUPER";
 
@@ -39,7 +39,7 @@
         [
           # Open and close programs
           "$mod, RETURN, exec, kitty"
-          "$mod, W, exec, zen"
+          "$mod, W, exec, zen-beta"
           "$mod, D, exec, walker"
           "$mod, Q, killactive"
 
