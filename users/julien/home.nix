@@ -46,6 +46,7 @@
 
   imports = [
     ../../modules/user/git.nix
+    ../../modules/user/gh.nix
     ../../modules/user/hyprland.nix
     ../../modules/user/neovim.nix
     ../../modules/user/direnv.nix

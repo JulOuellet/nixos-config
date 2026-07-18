@@ -24,7 +24,6 @@
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     pulumi
-    gh
   ];
 
   fonts.fontconfig.enable = true;
@@ -56,6 +55,7 @@
 
   imports = [
     ../../modules/user/git.nix
+    ../../modules/user/gh.nix
     ../../modules/user/terminal/zsh.nix
     ../../modules/user/neovim.nix
     ../../modules/user/btop.nix
