@@ -2,6 +2,8 @@
   config,
   pkgs,
   nixgl,
+  claude-code,
+  system,
   ...
 }: {
   home.username = "julien";
@@ -24,6 +26,7 @@
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     pulumi
+    claude-code.packages.${system}.default
   ];
 
   fonts.fontconfig.enable = true;
@@ -35,6 +38,7 @@
   };
 
   programs.zsh = {
+    enable = true;
     initExtra = ''
       eval "$(${pkgs.mise}/bin/mise activate zsh)"
 
@@ -60,6 +64,7 @@
     ../../modules/user/neovim.nix
     ../../modules/user/btop.nix
     ../../modules/user/zk.nix
-    ../../modules/user/terminal/kitty.nix
+    # Temp disable, flagged by SentinelOne
+    # ../../modules/user/terminal/kitty.nix
   ];
 }

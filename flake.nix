@@ -71,7 +71,7 @@
 
       julien-ubuntu = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit system nvim-config nixgl;};
+        extraSpecialArgs = {inherit system nvim-config nixgl claude-code;};
         modules = [
           ./users/julien-ubuntu/home.nix
           {targets.genericLinux.enable = true;}
