@@ -2,6 +2,7 @@
   config,
   pkgs,
   claude-code,
+  opencode,
   system,
   ...
 }: {
@@ -31,6 +32,7 @@
     dbeaver-bin
     firefox
     claude-code.packages.${system}.default
+    opencode.packages.${system}.default
   ];
 
   home.file = {

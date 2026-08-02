@@ -3,30 +3,23 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
-
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     walker.url = "github:abenz1267/walker";
-
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nvim-config.url = "github:JulOuellet/nvim-config";
-
     catppuccin.url = "github:catppuccin/nix";
-
     claude-code.url = "github:sadjow/claude-code-nix";
-
+    opencode.url = "github:anomalyco/opencode";
     nixgl.url = "github:nix-community/nixGL";
   };
 
@@ -40,6 +33,7 @@
     nvim-config,
     catppuccin,
     claude-code,
+    opencode,
     nixgl,
     ...
   }: let
@@ -60,7 +54,7 @@
     homeConfigurations = {
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config catppuccin claude-code;};
+        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config catppuccin claude-code opencode;};
         modules = [
           ./users/julien/home.nix
           zen-browser.homeModules.default
