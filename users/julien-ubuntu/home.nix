@@ -3,6 +3,7 @@
   pkgs,
   nixgl,
   claude-code,
+  opencode,
   system,
   ...
 }: {
@@ -27,6 +28,7 @@
     nerd-fonts.jetbrains-mono
     pulumi
     claude-code.packages.${system}.default
+    opencode.packages.${system}.default
   ];
 
   fonts.fontconfig.enable = true;
