@@ -20,7 +20,15 @@
   home.stateVersion = "25.11"; # Please read the comment before changing.
 
   # nixGL lets Nix-built GUI apps find Ubuntu's system GL drivers.
-  targets.genericLinux.nixGL.packages = nixgl.packages;
+  targets.genericLinux.nixGL.packages = import nixgl {
+    pkgs = import nixgl.inputs.nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    # Keep this in sync with Ubuntu's installed NVIDIA driver
+    nvidiaVersion = "580.173.02";
+    nvidiaHash = "06vfyhh6hy2jv7gwr1g19s2g4kmnzq2d7mfkcfkaia853q0bk3ld";
+  };
   targets.genericLinux.nixGL.defaultWrapper = "nvidia";
 
   nixpkgs.config.allowUnfree = true;
@@ -66,7 +74,6 @@
     ../../modules/user/neovim.nix
     ../../modules/user/btop.nix
     ../../modules/user/zk.nix
-    # Temp disable, flagged by SentinelOne
-    # ../../modules/user/terminal/kitty.nix
+    ../../modules/user/terminal/kitty.nix
   ];
 }
