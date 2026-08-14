@@ -20,6 +20,7 @@
     catppuccin.url = "github:catppuccin/nix";
     claude-code.url = "github:sadjow/claude-code-nix";
     opencode.url = "github:anomalyco/opencode";
+    herdr.url = "github:herdrdev/herdr/v0.8.0";
     nixgl.url = "github:nix-community/nixGL";
   };
 
@@ -34,6 +35,7 @@
     catppuccin,
     claude-code,
     opencode,
+    herdr,
     nixgl,
     ...
   }: let
@@ -54,18 +56,35 @@
     homeConfigurations = {
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit system walker zen-browser firefox-addons nvim-config catppuccin claude-code opencode;};
+        extraSpecialArgs = {
+          inherit
+            system
+            walker
+            zen-browser
+            firefox-addons
+            nvim-config
+            catppuccin
+            claude-code
+            opencode
+            ;
+        };
         modules = [
           ./users/julien/home.nix
-          zen-browser.homeModules.default
-          catppuccin.homeModules.catppuccin
-          ./modules/user/catppuccin.nix
         ];
       };
 
       julien-ubuntu = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit system nvim-config nixgl claude-code opencode;};
+        extraSpecialArgs = {
+          inherit
+            system
+            nvim-config
+            nixgl
+            claude-code
+            opencode
+            herdr
+            ;
+        };
         modules = [
           ./users/julien-ubuntu/home.nix
           {targets.genericLinux.enable = true;}

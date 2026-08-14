@@ -56,5 +56,6 @@
     ../../modules/user/zk.nix
     ../../modules/user/btop.nix
     ../../modules/user/mako.nix
+    ../../modules/user/catppuccin.nix
   ];
 }

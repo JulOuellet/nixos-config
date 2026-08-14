@@ -4,6 +4,7 @@
   nixgl,
   claude-code,
   opencode,
+  herdr,
   system,
   ...
 }: {
@@ -37,6 +38,7 @@
     pulumi
     claude-code.packages.${system}.default
     opencode.packages.${system}.default
+    herdr.packages.${system}.default
   ];
 
   fonts.fontconfig.enable = true;
