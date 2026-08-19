@@ -57,5 +57,6 @@
     ../../modules/user/btop.nix
     ../../modules/user/mako.nix
     ../../modules/user/catppuccin.nix
+    ../../modules/user/awscli.nix
   ];
 }
