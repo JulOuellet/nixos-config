@@ -4,6 +4,7 @@
   claude-code,
   opencode,
   system,
+  herdr,
   ...
 }: {
   home.username = "julien";
@@ -33,6 +34,7 @@
     firefox
     claude-code.packages.${system}.default
     opencode.packages.${system}.default
+    herdr.packages.${system}.default
   ];
 
   home.file = {
