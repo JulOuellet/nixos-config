@@ -6,8 +6,7 @@
   programs.kitty = {
     enable = true;
 
-    # Wraps kitty with nixGL on generic Linux; no-op on NixOS.
-    package = config.lib.nixGL.wrap pkgs.kitty;
+    package = config.lib.nixGL.wrappers.mesa pkgs.kitty;
 
     settings = {
       window_padding_width = 5;
