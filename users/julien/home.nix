@@ -32,6 +32,7 @@
     postman
     dbeaver-bin
     firefox
+    pi-coding-agent
     claude-code.packages.${system}.default
     opencode.packages.${system}.default
     herdr.packages.${system}.default
