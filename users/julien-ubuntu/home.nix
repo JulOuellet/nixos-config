@@ -5,6 +5,7 @@
   claude-code,
   opencode,
   herdr,
+  llm-agents,
   system,
   ...
 }: {
@@ -39,6 +40,8 @@
     claude-code.packages.${system}.default
     opencode.packages.${system}.default
     herdr.packages.${system}.default
+    tree
+    llm-agents.packages.${system}.codex
   ];
 
   fonts.fontconfig.enable = true;

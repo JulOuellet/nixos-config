@@ -3,22 +3,27 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     walker.url = "github:abenz1267/walker";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nvim-config.url = "github:JulOuellet/nvim-config";
     catppuccin.url = "github:catppuccin/nix";
     claude-code.url = "github:sadjow/claude-code-nix";
     opencode.url = "github:anomalyco/opencode";
     herdr.url = "github:herdrdev/herdr/v0.8.0";
     nixgl.url = "github:nix-community/nixGL";
+    llm-agents.url = "github:numtide/llm-agents.nix";
   };
 
   outputs = {
@@ -34,6 +39,7 @@
     opencode,
     herdr,
     nixgl,
+    llm-agents,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -53,6 +59,7 @@
     homeConfigurations = {
       julien = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+
         extraSpecialArgs = {
           inherit
             system
@@ -66,6 +73,7 @@
             herdr
             ;
         };
+
         modules = [
           ./users/julien/home.nix
         ];
@@ -73,6 +81,7 @@
 
       julien-ubuntu = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+
         extraSpecialArgs = {
           inherit
             system
@@ -81,8 +90,10 @@
             claude-code
             opencode
             herdr
+            llm-agents
             ;
         };
+
         modules = [
           ./users/julien-ubuntu/home.nix
           {targets.genericLinux.enable = true;}
