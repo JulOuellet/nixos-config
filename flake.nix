@@ -71,6 +71,7 @@
             claude-code
             opencode
             herdr
+            llm-agents
             ;
         };
 
