@@ -3,9 +3,7 @@
   pkgs,
   nixgl,
   claude-code,
-  opencode,
   herdr,
-  llm-agents,
   system,
   ...
 }: {
@@ -38,10 +36,8 @@
     nerd-fonts.jetbrains-mono
     pulumi
     claude-code.packages.${system}.default
-    opencode.packages.${system}.default
     herdr.packages.${system}.default
     tree
-    llm-agents.packages.${system}.codex
   ];
 
   fonts.fontconfig.enable = true;

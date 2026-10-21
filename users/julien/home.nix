@@ -2,10 +2,8 @@
   config,
   pkgs,
   claude-code,
-  opencode,
   system,
   herdr,
-  llm-agents,
   ...
 }: {
   home.username = "julien";
@@ -35,9 +33,7 @@
     firefox
     pi-coding-agent
     claude-code.packages.${system}.default
-    opencode.packages.${system}.default
     herdr.packages.${system}.default
-    llm-agents.packages.${system}.codex
   ];
 
   home.file = {

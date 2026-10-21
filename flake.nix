@@ -20,10 +20,8 @@
     nvim-config.url = "github:JulOuellet/nvim-config";
     catppuccin.url = "github:catppuccin/nix";
     claude-code.url = "github:sadjow/claude-code-nix";
-    opencode.url = "github:anomalyco/opencode";
     herdr.url = "github:herdrdev/herdr/v0.8.0";
     nixgl.url = "github:nix-community/nixGL";
-    llm-agents.url = "github:numtide/llm-agents.nix";
   };
 
   outputs = {
@@ -36,10 +34,8 @@
     nvim-config,
     catppuccin,
     claude-code,
-    opencode,
     herdr,
     nixgl,
-    llm-agents,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -69,9 +65,7 @@
             nvim-config
             catppuccin
             claude-code
-            opencode
             herdr
-            llm-agents
             ;
         };
 
@@ -89,9 +83,7 @@
             nvim-config
             nixgl
             claude-code
-            opencode
             herdr
-            llm-agents
             ;
         };
 
