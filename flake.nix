@@ -50,6 +50,12 @@
           ./hosts/thinkpad-t480/configuration.nix
         ];
       };
+      homelab = lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [
+          ./hosts/homelab/configuration.nix
+        ];
+      };
     };
 
     homeConfigurations = {
