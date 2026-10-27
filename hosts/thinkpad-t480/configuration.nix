@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ../../modules/system/base-config.nix
     ../../modules/system/greetd.nix
+    ../../modules/system/tailscale.nix
   ];
 
   boot = {

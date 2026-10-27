@@ -8,6 +8,7 @@
     "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
     # Strips docs, man pages and other extras
     "${modulesPath}/profiles/minimal.nix"
+    ../../modules/system/tailscale.nix
   ];
 
   # sd-image-aarch64.nix pulls in the installer's rescue tools and ZFS support, which a server doesn't need
