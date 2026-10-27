@@ -34,6 +34,11 @@
     };
   };
 
+  services.tailscale = {
+    openFirewall = true;
+    extraSetFlags = ["--accept-dns=false"];
+  };
+
   # Lets nixos-rebuild deploy from the laptop without a password prompt
   security.sudo.wheelNeedsPassword = false;
   nix.settings.trusted-users = ["julien"];
